@@ -3,7 +3,6 @@ const selectScience = document.getElementById("science");
 const sleectTech = document.getElementById("technology");
 const selectEngineer = document.getElementById("engineering");
 const selectMath = document.getElementById("mathematics");
-const startButton = document.getElementById("start-button");
 const gameScreen = document.getElementById("game-screen");
 const questionElement = document.getElementById("question");
 const optionContainer = document.getElementById("option-cont");
@@ -88,6 +87,7 @@ homeButton1.addEventListener("click", () =>{
 function startGame() {
     score = 0;
     currentQuestionIndex = 0;
+    rightWrong.textContent = "";
     startScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
     loadQuestion();

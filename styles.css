@@ -1,3 +1,121 @@
+body {
+    background-color: #E6D6F3;
+    text-align: center;
+    align-items: center;
+}
+
+#container {
+    background-color: #FAF0E6;
+    padding: 50px;
+    width: 520px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #2F4F4F;
+}
+
+p {
+    color: #6B8E23;
+    font-size: 14pt;
+}
+
 .hidden {
     display: none;
+}
+
+.mode-button {
+    background-color: #A8E6CF;
+    border: none;
+    margin: 5px;
+    width: 95px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #FF6F61;
+}
+
+.mode-button:hover {
+    background-color: #93e4c6;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#submit-button {
+    margin-top: 20px;
+}
+
+#home-button1 {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #A8E6CF;
+    border: none;
+    width: 95px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #FF6F61;
+}
+
+#home-button1:hover {
+    background-color: #7be2bd;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.under-button {
+    background-color: #E6D6F3;
+    border:none;
+    height: 40px;
+    width: 95px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #6B8E23;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.under-button:hover {
+    background-color: #d9b9f3;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#next-button {
+    background-color: #E6D6F3;
+    border:none;
+    height: 40px;
+    width: 95px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #6B8E23;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-button {
+    background-color: #f3daba;
+    border:none;
+    margin: 10px;
+    height: 50px;
+    width: 160px;
+    font-size: larger;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #6B8E23;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-button:hover {
+    background-color: #f4c68b;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+#question {
+    font-size: 20px;
 }
