@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Trivia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <h1>STEM Trivia</h1>
+            <p>Test your knowledge in Science, Technology, Engineering and Maths</p>
+            <p>Choose a mode below</p>
+            <button class="mode-button" id="science">Science</button>
+            <button class="mode-button" id="technology">Technology</button>
+            <button class="mode-button" id="engineering">Engineering</button>
+            <button class="mode-button" id="mathematics">Mathematics</button>
+            <button id="start-button">Start</button>
+        </div>
+        <!-- Game Screen -->
+         <div id="game-screen" class="hidden">
+            <h1>STEM Trivia</h1>
+            <div id="question"></div>
+            <div id="option-cont"></div>
+            <button id="submit-button" class="under-button">Submit</button>
+            <button id="next-button" class="under-button">Next</button>
+            <button class="home-button">Home</button>
+         </div>
+         <!-- Results Screen -->
+        <div id="results-screen">
+            <h1>STEM Trivia</h1>
+            <p id="feedback"></p>
+            <button class="home-button">Home</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
