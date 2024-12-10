@@ -12,10 +12,11 @@ const nextButton = document.getElementById("next-button");
 const homeButton = document.getElementsByClassName("home-button");
 const resultsScreen = document.getElementById("results-screen");
 const feedback = document.getElementById("feedback");
+const rightWrong = document.getElementById("right-wrong")
 
 const questions = {
-    mode: [
-        {question: "blah blah", options: "blah blah", correctAns: "blah"},
+    science: [
+        {question: "blah blah", options: ["blah blah", "blah", "blah blah blah"], correctAns: "blah"},
         {question: "blah blah", options: "blah blah", correctAns: "blah"}
     ]
 }
@@ -23,16 +24,53 @@ const questions = {
 let score = 0;
 let currentMode = "";
 let currentQuestionIndex = 0;
+let selectedAns = "";
 
-function startGame(mode) {
+selectScience.addEventListener("click", ()=> {
+    currentMode = "science";
+    startGame()
+});
+
+submitButton.addEventListener("click", checkAnswer());
+
+nextButton.addEventListener("click", nextQuestion());
+
+function startGame() {
     score = 0;
     currentQuestionIndex = 0;
-    currentMode = mode;
     startScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
     loadQuestion();
 }
 
 function loadQuestion() {
-    const currentQuestion = questions.currentMode[currentQuestionIndex].question;
+    const currentQuestion = questions[currentMode][currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+    
+    optionContainer.innerHTML = "";
+
+    currentQuestion.options.forEach((option) => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.classList.add("option-button");
+        optionContainer.appendChild(button);
+        button.addEventListener("click", () => {
+            selectedAns = button.textContent.toLowerCase();
+        })
+    });
 }
+
+function checkAnswer() {
+    const currentQuestion = questions[currentMode][currentQuestionIndex];
+    if (selectedAns === currentQuestion.correctAns) {
+        score++;
+        rightWrong.textContent = "Correct!";
+        rightWrong.style.color = "green";
+    } else {
+        rightWrong.textContent = "Incorrect!";
+        rightWrong.style.color = "red";
+    }
+    submitButton.classList.add("hidden");
+    nextButton.classList.remove("hidden");
+}
+
